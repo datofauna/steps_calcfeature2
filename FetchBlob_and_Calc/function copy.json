@@ -1,0 +1,24 @@
+{
+    "scriptFile": "__init__.py",
+    "entrypoint": "main",
+    "bindings": [
+      {
+        "name": "message",
+        "type": "serviceBusTrigger",
+        "direction": "in",
+        "topicName": "volito-event-created",
+        "subscriptionName": "send-features-bigdata",
+        "connection": "AzureServiceBusConnectionString"
+      },
+      {
+        "name": "completed",
+        "type": "serviceBus",
+        "direction": "out",
+        "topicName": "calcfeatures-completed",
+        "connection": "AzureServiceBusConnectionString"
+      }
+    ]
+  }
+
+
+  
